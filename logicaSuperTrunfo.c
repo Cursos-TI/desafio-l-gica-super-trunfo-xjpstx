@@ -130,6 +130,8 @@ void exibicao2(){
 }
 
 void menu(){
+
+    do {
     printf("*** Menu de Comparação***\n");
     printf("1. População\n");
     printf("2. Área\n");
@@ -138,6 +140,7 @@ void menu(){
     printf("5. PIB\n");
     printf("6. PIB per capita\n");
     printf("7. Vencedor da rodada\n");
+    printf("8. Sair\n");
     printf("Selecione qual dos atributos você deseja comparar: \n");
     scanf("%d", &opcao); 
 
@@ -217,9 +220,12 @@ void menu(){
                 printf("Carta 2 venceu a partida!\n");
             }
             break;
+        case 8:
+            printf("Saindo...\n");
         default:
             printf("Opção inválida");
-    }
+        }
+    } while(opcao != 8);
 }
 
 int main(){
